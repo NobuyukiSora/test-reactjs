@@ -22,14 +22,24 @@ export default function TestScreen() {
   
     try {
       const response = await fetch(api, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ /*payload*/ }),
-        credentials: 'include' 
+        mode: "no-cors"  
       });
+      
+      
+      // const response = await fetch(api, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'Accept': 'application/json',
+      //   },
+      //   body: JSON.stringify({ /*payload*/ }),
+      //   credentials: 'include' 
+      // });
   
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
