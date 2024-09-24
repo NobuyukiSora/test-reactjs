@@ -63,8 +63,8 @@ export default function TestScreen() {
   const errorMassageComponenet = () => {
     if (errorMessage) {
       return (
-        <div className="error">
-          <Alert severity="info" >{errorMessage}</Alert>
+        <div className="alert">
+          <Alert severity="error" >{errorMessage}</Alert>
         </div>
       )
     }
